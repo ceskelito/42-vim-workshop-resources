@@ -1,0 +1,24 @@
+" source: github.com/ceskelito/42-vim-workshop-resources
+
+" Lines and line numbers
+set number                " Enable line numbers
+set relativenumber        " Set relative line numbers (starting from the cursor)
+
+" Indentation and tabs
+set tabstop=4             " Number of spaces displayed when Vim encounters a <Tab> character
+set softabstop=4          " Number of spaces inserted or removed when pressing <Tab> or <Backspace> in insert mode
+set shiftwidth=4          " Number of spaces used for each indentation level (>>, <<, autoindent)
+
+set autoindent            " Enable automatic indentation
+set cindent               " Set C-like indentation style
+
+" General usage
+set mouse=a               " Enable mouse usage in all modes
+syntax on                 " Enable syntax highlighting
+
+" To continue practicing -> vimtutor
+" a program you can launch from the terminal
+
+" For help or deeper explanations of commands -> :help
+" run it in Vim's command line
+
