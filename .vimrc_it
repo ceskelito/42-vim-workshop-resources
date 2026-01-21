@@ -1,4 +1,6 @@
-" source: github.com/ceskelito/42-vim-workshop-resources
+" Source: github.com/ceskelito/42-vim-workshop-resources
+
+" Per usare questa configurazione copia questo file in ~/.vimrc 
 
 " Righe e numeri di riga
 set number 				" Abilita i numeri di riga

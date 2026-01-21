@@ -1,4 +1,6 @@
-" source: github.com/ceskelito/42-vim-workshop-resources
+" Source: github.com/ceskelito/42-vim-workshop-resources
+
+" In order to use this configuration copy this file as ~/.vimrc  
 
 " Lines and line numbers
 set number                " Enable line numbers
