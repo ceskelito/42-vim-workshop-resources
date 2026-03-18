@@ -1,0 +1,140 @@
+AI DISCLAIMER: this file was generated with Google Gemini from the course slides. Manual edits have been applied.
+
+Welcome to the Vim Workshop (by rceschel)
+
+Vim is an efficiency-driven editor. Unlike traditional editors, here you don't just type: you "talk" to the text.
+
+NOTE: Don't be afraid of breaking this file. It's meant to be edited!
+		Being a copy of the original, you can replay the tutorial whenever you want.
+
+---
+
+LESSON 1: Insert Mode
+
+Vim is modal. By default you are in Normal Mode (for navigation). To write you need to enter Insert Mode.
+
+1. Move the cursor to the line below.
+2. Press `i' to insert text before the cursor.
+3. Type something.
+4. Press ESC to return to Normal Mode (essential!).
+
+---> [Place the cursor here and try typing]
+
+Try the other entry points:
+- I: Beginning of the line.
+- a: After the cursor (append).
+- A: End of the line.
+- o: New line below.
+- O: New line above.
+
+---
+
+LESSON 2: Moving Naturally (Motions)
+
+In Normal Mode, forget the arrow keys. Use the "home row" of the keyboard:
+
+		k (up)
+h (left)		l (right)
+		j (down)
+
+Exercise: Move between these lines and reach the end:
+- Use w to jump word by word (word).
+- Use e to go to the end of a word (end).
+- Use 0 to jump to the beginning of the line.
+- Use $ to jump to the end of the line.
+
+---
+
+LESSON 3: The Language of Vim (Operators + Motions)
+
+Vim works in "sentences": OPERATOR + COUNT + MOTION.
+
+- d = delete (cut)
+- y = yank (copy)
+- p = put (paste)
+
+Deletion exercise:
+1. Go to the line below.
+2. Position yourself on the word "ERROR" and press dw (delete word).
+3. Go to the end of the line and press d0 (delete to the beginning of the line).
+
+---> ERROR This line needs to be cleaned up ERROR.
+
+The whole-line trick:
+- Press dd to delete the entire line.
+- Press 3dd to delete three lines at once.
+
+---
+
+LESSON 4: Visual Mode (Select and Act)
+
+Sometimes it's better to see what you're doing.
+
+1. Go to the word below: HIGHLIGHTME.
+2. Press v (visual mode).
+3. Move with l or w to select text.
+4. Press d to delete it or y to copy it.
+5. Move elsewhere and press p to paste it.
+
+---> HIGHLIGHTME
+
+paste here --->
+
+---
+
+LESSON 5: The "Panic Button" and mistakes
+
+If you get lost or Vim does strange things: ESC is your best friend. Press it multiple times.
+
+Undoing mistakes:
+- u: Undo the last action.
+- CTRL-R: Redo the undone action.
+- .: Repeat the last change. Super handy!
+
+---
+
+LESSON 6: Search and Command
+
+Search:
+1. Press /.
+2. Type the word "Header" and press Enter.
+3. Use n to go to the next match, N for the previous one.
+
+Command Line:
+Press `:' to enter direct commands:
+
+    :w  ( write )
+    :q  ( quit )
+    :set number ( Enable line numbers )
+
+The power of the exclamation mark (!)
+
+You can run terminal commands without leaving Vim by typing :! followed by the command.
+
+Try typing `:!ls` and pressing Enter. You'll see the files in your current folder directly "above" Vim.
+
+This can be useful to check the Norm without leaving Vim!
+
+---
+
+LESSON 7: Towards Customization (.vimrc)
+
+Settings like ':set number' are volatile. To make them persistent, you need to write them in your configuration file.
+
+Final task:
+1. Exit this file with :q!.
+2. In the terminal, type vim ~/.vimrc.
+3. Write inside: set number and set relativenumber.
+4. Save and exit with :x.
+
+---
+
+RESOURCES TO BECOME A PRO
+
+The journey has just begun. Here's where you can keep practicing:
+
+- Vimtutor: Type vimtutor in your terminal for the complete official interactive guide (takes about 30 minutes).
+- Built-in help: In Normal Mode, type :help followed by a command (e.g. :help dd) to read the official documentation.
+- Vim Adventures: Want to learn by playing? Go to [https://vim-adventures.com/] — it's a logic game set in the world of Vim where you move and interact using the editor's commands.
+
+"Vim appears empty and disorienting, but for this very reason it can conform to our every need."
